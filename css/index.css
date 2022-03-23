@@ -1393,7 +1393,7 @@ input::placeholder {
   z-index: -999;
   width: 100%;
   height: 100%;
-  background: url(https://img-blog.csdnimg.cn/389f6098eacd41d8a142e51b3e4db059.png);
+  background: url(https://img-blog.csdnimg.cn/053b6649f49045f4a967874ca09512cf.png);
   background-attachment: local;
   background-position: center;
   -webkit-background-size: cover;
@@ -5711,7 +5711,8 @@ blockquote.pullquote.right {
   --timeline-bg: #1f1f1f;
 }
 [data-theme='dark'] #web_bg:before,
-[data-theme='dark'] #footer:before {
+[data-theme='dark'] #footer:before,
+[data-theme='dark'] #page-header:before   /*首页头图暗色蒙版*/ {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -6088,7 +6089,7 @@ a.article-title, a.blog-slider__title, a.categoryBar-list-link, h1.post-title {
     background: rgba(255, 255, 255, 0.0);
     color: #000;
     border-top-right-radius: 0px;
-    border-top-left-radius: 0px; 
+    border-top-left-radius: 0px;
     backdrop-filter: saturate(100%) blur(5px)
 }
 
@@ -6098,6 +6099,8 @@ a.article-title, a.blog-slider__title, a.categoryBar-list-link, h1.post-title {
 
 
 /* 鱼塘固定宽度 */
+
+
 /* canvas:not(#ribbon-canvas),
 #web_bg {
     margin-bottom: -2.0rem;
@@ -6183,12 +6186,9 @@ div#category {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* 去掉 top_img 黑色不透明遮罩 */
-#page-header::before{
-    background:transparent !important;
-}
 
 /* 页脚透明 */
+
 
 /* #footer{
   background: transparent!important;
@@ -6206,28 +6206,35 @@ div#category {
 /* 头图透明 */
 
 
-/* #page-header{
+/* 
+#page-header{
   background: transparent!important;
 } */
 
 
+/* 去掉 top_img 黑色不透明遮罩 */
+
+#page-header::before {
+    background: transparent !important;
+}
+
+
 /*top-img黑色透明玻璃效果移除，不建议加，除非你执着于完全一图流或者背景图对比色明显 */
 
-
-/* #page-header.post-bg:before {
-  background-color: transparent!important;
-} */
+#page-header.post-bg:before {
+    background-color: transparent!important;
+}
 
 
 /*夜间模式伪类遮罩层透明*/
 
-/* [data-theme="dark"] #footer::before {
+[data-theme="dark"] #footer::before {
     background: transparent!important;
 }
 
 [data-theme="dark"] #page-header::before {
     background: transparent!important;
-} */
+}
 
 
 /* 全局默认鼠标指针 */
@@ -6293,7 +6300,9 @@ i:hover {
     cursor: url('https://npm.elemecdn.com/akilar-candyassets/cur/hf.cur'), auto;
 }
 
+
 /* 音乐播放器缩放  */
+
 .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
     left: -66px !important;
     /* 默认情况下缩进左侧66px，只留一点箭头部分 */
@@ -6304,22 +6313,37 @@ i:hover {
     /* 鼠标悬停是左侧缩进归零，完全显示按钮 */
 }
 
+
 /* .icon-xxx:before {
     content: "\e600";
   } */
+
+
 /* 卡片处小图标 */
+
+
 /* .card_icon { */
-    /* 修改颜色 */
-    /* color: blue; */
-    /* 修改大小 */
-    /* font-size: 24px; */
+
+
+/* 修改颜色 */
+
+
+/* color: blue; */
+
+
+/* 修改大小 */
+
+
+/* font-size: 24px; */
+
+
 /* } */
+
 
 /* .item-headline:after {
     transform: perspective(20px) rotateX(3deg);
     -webkit-transform: perspective(20px) rotateX(3deg);
  } */
-
 
 @font-face {font-family: "iconfont";
     src: url('//at.alicdn.com/t/font_2350697_23go59pn9jz.eot?t=1611759187752'); /* IE9 */
